@@ -1,5 +1,10 @@
 *{box-sizing: border-box;}
 
+body{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 nav {
   overflow: hidden;
@@ -26,7 +31,7 @@ li.li-menu{
   background-color: #E42E0B;
 height: 60px;
 width: 100%;
-;
+
 }
 li.li-menu{
   float: left;
@@ -51,6 +56,22 @@ li.mySlides1 {
 li.mySlides1 img {
   width: 100%;
 }
+li.mySlides2 {
+    width: 275px;
+}
+li.mySlides2 img {
+  width: 100%;
+  text-align: center;
+}
+
+li.mySlides3 {
+    width: 275px;
+}
+li.mySlides3 img {
+  width: 100%;
+  text-align: center;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
