@@ -1,5 +1,8 @@
 *{box-sizing: border-box;}
 
+body{
+  background-color: #7B6E6E
+}
 
 nav {
   overflow: hidden;
@@ -18,20 +21,22 @@ ul.logo {
 ul.ul-menu {
   float: left;
   width: 70%;
-  margin-top: 91px;
+  margin-top: 60px;
 
 
 }
 li.li-menu{
-  background-color: #E42E0B;
-height: 60px;
+  background-color: #0F0856;
+height: 94px;
 width: 100%;
-;
+margin-top: -45px;
+
 }
 li.li-menu{
   float: left;
   width: 25%;
   text-align: center;
+  padding: 40px;
 }
 
 form{
@@ -43,4 +48,29 @@ input{
   width: 70%;
   height: 5vh;
 
+}
+
+
+main section.main div button {
+  position: absolute;
+  left:63%;
+  top:335px;
+  cursor:pointer;
+}
+
+main section.main article p {
+  width: 100%;
+}
+main section.main article img {
+  width: 100%;
+}
+
+main section.main div.areas-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section.main div.areas-container article {
+  width: 45%;
+  height: 25vw;
+  margin: 0 2.5%;
 }
