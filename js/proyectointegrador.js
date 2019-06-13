@@ -1,4 +1,6 @@
 var key = '14227022544b0f4bb15b6a738161d32f'
+var urlDetalle = ""
+
 window.onload = function () {
 
 //carrusel1
@@ -24,9 +26,11 @@ window.onload = function () {
        console.log(arrayDePeliculas[i].title)
 //carrusel
        li = "<li class='mySlides1'>"
-         li += '<h1>'+ title +'</h1>'
-         li += '<img src='+ urlImg + poster + '>'
-       li += '</li>'
+       li += "<a href='"+urlDetalle+"?id="+arrayDePeliculas[i].id+"'>"
+       li += "<h1>"+ title +"</h1>"
+       li += '<img src='+ urlImg + poster + '>'
+       li += "</a>"
+       li += "</li>"
        ul.innerHTML += li
       //console.log(poster);
     }
