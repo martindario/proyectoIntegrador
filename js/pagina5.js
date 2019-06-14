@@ -14,18 +14,26 @@ window.addEventListener('load',function(){
    })
    .then (function(information){
      console.log(information);
-     var arrayDePeliculas = information.results
+     var pelicula = information
      var urlImg = "https://image.tmdb.org/t/p/original"
-     var detalles = information.overview
      var ul1 = document.querySelector("section ul")
 
-     li += '<h1>'+ title +'</h1>'
+     var detalles = pelicula.overview
+     var title = pelicula.title
+     var poster = pelicula.poster_path
+     var detalle = pelicula.overview
+
+     var li
+
+     li = '<li>'
+     li += '<h2>'+ title +'</h2>'
      li += '<img src='+ urlImg + poster + '>'
-     li += '<p>'+ urlDetalle +'</p>'
+     li += '<p>'+ detalles +'</p>'
      li += '</li>'
      ul1.innerHTML += li
+
      })
      .catch(function(error){
        console.log("There was na error: " + error);
      })
-   }) 
+   })

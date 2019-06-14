@@ -1,5 +1,5 @@
 var key = '14227022544b0f4bb15b6a738161d32f'
-var urlDetalle = ""
+var urlDetalle = "pagina5.html"
 
 window.onload = function () {
 
@@ -70,10 +70,17 @@ window.onload = function () {
            title = arrayDePeliculas[i].title
            console.log(arrayDePeliculas[i].title)
       //carrusel
+           // li = "<li class='mySlides2'>"
+           //   li += '<h1>'+ title +'</h1>'
+           //   li += '<img src='+ urlImg + poster + '>'
+           // li += '</li>'
+           // ul1.innerHTML += li
            li = "<li class='mySlides2'>"
-             li += '<h1>'+ title +'</h1>'
-             li += '<img src='+ urlImg + poster + '>'
-           li += '</li>'
+           li += "<a href='"+urlDetalle+"?id="+arrayDePeliculas[i].id+"'>"
+           li += "<h1>"+ title +"</h1>"
+           li += '<img src='+ urlImg + poster + '>'
+           li += "</a>"
+           li += "</li>"
            ul1.innerHTML += li
           //console.log(poster);
         }
@@ -112,10 +119,17 @@ window.onload = function () {
                title = arrayDePeliculas[i].title
                console.log(arrayDePeliculas[i].title)
           //carrusel
+               // li = "<li class='mySlides3'>"
+               //   li += '<h1>'+ title +'</h1>'
+               //   li += '<img src='+ urlImg + poster + '>'
+               // li += '</li>'
+               // ul2.innerHTML += li
                li = "<li class='mySlides3'>"
-                 li += '<h1>'+ title +'</h1>'
-                 li += '<img src='+ urlImg + poster + '>'
-               li += '</li>'
+               li += "<a href='"+urlDetalle+"?id="+arrayDePeliculas[i].id+"'>"
+               li += "<h1>"+ title +"</h1>"
+               li += '<img src='+ urlImg + poster + '>'
+               li += "</a>"
+               li += "</li>"
                ul2.innerHTML += li
               //console.log(poster)
             }
