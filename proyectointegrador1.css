@@ -74,6 +74,10 @@ main section.main div.areas-container article {
   height: 25vw;
   margin: 0 2.5%;
 }
+.login{
+  margin-left: 80vh;
+  margin-top: 2,7vh;
+}
 
 /* Slideshow container */
 .slideshow-container {
