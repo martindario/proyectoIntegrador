@@ -4,6 +4,7 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-color: #7B6E6E
 }
 
 nav {
@@ -23,20 +24,21 @@ ul.logo {
 ul.ul-menu {
   float: left;
   width: 70%;
-  margin-top: 91px;
+  margin-top: 60px;
 
 
 }
 li.li-menu{
-  background-color: #E42E0B;
-height: 60px;
+  background-color: #0F0856;
+height: 94px;
 width: 100%;
-
+margin-top: -45px;
 }
 li.li-menu{
   float: left;
   width: 25%;
   text-align: center;
+  padding: 40px;
 }
 
 form{
@@ -49,6 +51,11 @@ input{
   height: 5vh;
 
 }
+.login{
+  margin-left: 80vh;
+  margin-top: 2,7vh;
+}
+
 /* carrusel  */
 li.mySlides1 {
     width: 275px;
