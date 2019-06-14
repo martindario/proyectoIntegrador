@@ -4,7 +4,7 @@ var urlDetalle = "pagina5.html"
 
 var queryString = location.search
 var urlSearch = new URLSearchParams(window.location.search)
-var id = urlSearch.get("busqueda")
+var id = urlSearch.get("buscar")
 
 fetch("https://api.themoviedb.org/3/search/movie?api_key="+key+"&language=en-US&query="+id+"&page=1&include_adult=false")
 
