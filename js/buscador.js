@@ -22,7 +22,9 @@ fetch("https://api.themoviedb.org/3/search/movie?api_key="+key+"&language=en-US&
   //var ul = document.querySelector("section.populares ul")
   var ul1 = document.querySelector("section ul")
   //var ul2 = document.querySelector("section.comingSoon ul")
-  for (var i = 0; i < 5; i++) {
+
+  
+  for (var i = 0; i < 25; i++) {
       poster = arrayDePeliculas[i].poster_path
       title = arrayDePeliculas[i].title
       console.log(arrayDePeliculas[i].title)

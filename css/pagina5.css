@@ -1,0 +1,15 @@
+*{box-sizing: border-box;}
+
+body{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #7B6E6E
+}
+
+
+li.mySlides1 {
+      width: 275px;
+  }
+  li.mySlides1 img {
+    width: 100%;

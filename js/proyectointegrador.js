@@ -23,6 +23,7 @@ window.onload = function () {
     for (var i = 0; i < 5; i++) {
        poster = arrayDePeliculas[i].poster_path
        title = arrayDePeliculas[i].title
+       video = arrayDePeliculas[i].video
        console.log(arrayDePeliculas[i].title)
 //carrusel
        li = "<li class='mySlides1'>"
@@ -49,6 +50,7 @@ window.onload = function () {
       })
 
   //carrousel2
+
   fetch("https://api.themoviedb.org/3/movie/top_rated?api_key="+key+"&language=en-US&page=1")
 
       .then (function(response) {
