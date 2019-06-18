@@ -13,3 +13,20 @@ li.mySlides1 {
   }
   li.mySlides1 img {
     width: 100%;
+}
+section.recomendadas{
+display: block;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+}
+
+ul.mySlides1, ul.mySlides2, ul.mySlides3 {
+    text-align: center;
+}

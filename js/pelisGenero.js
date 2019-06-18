@@ -6,9 +6,11 @@ window.onload = function(){
   var url
   var urlGenero = "pagina4.html"
 
+  //Pelis
+  if(searchParams.has("idGenero")){
+    
 
-    fetch("https://api.themoviedb.org/3/genre/movie/list?api_key="+key+"&language=en-US")
-
+    fetch("https://api.themoviedb.org/3/discover/movie?api_key="+key+"&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres="+id)
         .then(function(respuesta) {
          return respuesta.json()
        })
@@ -17,11 +19,16 @@ window.onload = function(){
          console.log(informacion)
 
          for (var i = 0; i < 10 ; i++) { //informacion.results.length
-           var genero = peliculas[i].genres
+           console.log('esto es informacion' + peliculas);
+           var titulo = peliculas[i].title
+           var url = 'https://image.tmdb.org/t/p/w500/'
+           var img =  peliculas[i].poster_path;
+           var id = peliculas[i].id
 
           var li;
           li = '<li>'
-          li += '<h1>' + genero + '</h1>'
+          li += '<img src=' + url + img + '>'
+          li += '<div class="uk-position-center uk-panel"><h1>' + titulo + '</h1></div>'
           li += '</li>'
 
           console.log(li);
@@ -29,6 +36,6 @@ window.onload = function(){
           document.querySelector("section").innerHTML += li
          }
         })
-
+  }
 
 }
