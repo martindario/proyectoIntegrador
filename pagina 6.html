@@ -21,32 +21,24 @@
     <label for="nombre">
       Nombre:
     </label>
-    <input id="Nombre" type="text" name="nombre" value="" placeholder="ingrese su nombre aqui">
+    <input id="Nombre" type="text" name="nombre" value="" placeholder="ingrese su nombre aqui" required>
   </p>
-  <p>
-  <label for="apellido">
- Apellido:
-  </label>
-  <input id="apellido" type="text" name="apellido" value="" placeholder="ingrese su apellido aqui">
-    </p>
     <p>
     <label for="email">
     Email:
   </label>
-  <input id="email" type="email" name="email" value="" placeholder="ingrese su email aqui">
+  <input id="email" type="email" name="email" value="" placeholder="ingrese su email aqui" required>
 </p>
   <p>
-    <label for="contraseña">
-    Contraseña:
-  </label>
-  <input id="contaseña" type="password" name="contraseña" value="" placeholder="ingrese su contraseña aqui">
+    <select name="Gender" required>
+      <option value="Mal"> Male </option>
+      <option value="Fem"> Female </option>
+      <option value="Oth"> Others </option>
+      </select>
   </p>
   <p>
-    <button type="button" onclick="getData" name="button"> Enviar </button>
-
+  <button type="button" onclick="getData" name="button"> Enviar </button>
   </p>
-
-
 </form>
 </div>
 </body>
@@ -55,6 +47,6 @@
 
   </footer>
 </html>
-<script type="text/javascript" src="js/formulario.js">
+<script type="text/javascript" src="js/login.js">
 
 </script>

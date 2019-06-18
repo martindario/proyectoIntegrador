@@ -17,9 +17,9 @@ window.onload = function(){
          console.log(informacion)
 
          for (var i = 0; i < 10 ; i++) { //informacion.results.length
-           var genero = peliculas[i].genres
-
+          var genero = peliculas[i].genres
           var li;
+          
           li = '<li>'
           li += '<h1>' + genero + '</h1>'
           li += '</li>'
