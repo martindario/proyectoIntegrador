@@ -4,6 +4,9 @@ var url_string = window.location.href
  console.log(id_de_pelicula);
  var key = '14227022544b0f4bb15b6a738161d32f'
  var urlDetalle = "pagina5.html"
+ var genero = url.searchParams.get("id");
+ //var id = searchParams.get("idGenero")
+ //var genders = information.genres[0]
 
 window.addEventListener('load',function(){
 
@@ -22,16 +25,20 @@ window.addEventListener('load',function(){
      var title = pelicula.title
      var poster = pelicula.poster_path
      var detalle = pelicula.overview
-     var genero = pelicula.genres
+    // var genero = pelicula.genres
      var fecha = pelicula.release_date
      var idioma = pelicula.original_language
      var li
+
+     var arrayDeGeneros = pelicula.genres
+     var genero = arrayDeGeneros[0]
+     console.log(genero.name);
 
      li = '<li>'
      li += '<h2>'+ title +'</h2>'
      li += '<img src='+ urlImg + poster + '>'
      li += '<p>'+ detalles +'</p>'
-     li += '<p>'+ "genero:" + genero +'</p>'
+     li += '<p>'+ "genero:" + genero.name +'</p>'
      li += '<p>'+ "Estreno:" + fecha +'</p>'
      li += '<p>'+ "Idioma:" + idioma +'</p>'
      li += '</li>'
@@ -52,8 +59,9 @@ window.addEventListener('load',function(){
      .then (function(information){
        console.log(information.results);
        var arrayDePeliculas = information.results
-       var key = data.results[0].key
-       document.querySelector("div.trailer section iframe").src += key
+       var key = arrayDePeliculas[0].key
+       console.log(key);
+       document.querySelector("div.trailer iframe").src += key
 
    })
    .catch(function(error){
@@ -61,30 +69,32 @@ window.addEventListener('load',function(){
    })
 
    // https://api.themoviedb.org/3/movie/{movie_id}/recommendations?api_key=<<api_key>>&language=en-US&page=1
-fetch("https://api.themoviedb.org/3/movie/"+ id_de_pelicula+ "/recommendations?api_key="+key+"&language=en-US&page=1")
+// fetch("https://api.themoviedb.org/3/movie/"+ id_de_pelicula+ "/recommendations?api_key="+key+"&language=en-US&page=1")
+//
+// then (function(response) {
+//   return response.json();
+// })
+// .then (function(information){
+//   console.log(information.results);
+//   var pelicula = information
+//   var ul1 = document.querySelector("div.reseña section")
+//   var recomendaciones = information.results
+//
+//   li = '<li>'
+//   li += '<h3>'+ "reseña" +'</h3>'
+//   li += '<p>'+ recomendaciones +'</p>'
+//   li += '</li>'
+//   ul1.innerHTML += li
+//
+// })
+// .catch(function(error){
+// console.log("There was na error: " + error);
+// })
 
-then (function(response) {
-  return response.json();
-})
-.then (function(information){
-  console.log(information.results);
-  var pelicula = information
-  var ul1 = document.querySelector("div.reseña section")
-  var recomendaciones = information.results
-
-  li = '<li>'
-  li += '<h3>'+ "reseña" +'</h3>'
-  li += '<p>'+ recomendaciones +'</p>'
-  li += '</li>'
-  ul1.innerHTML += li
-
-})
-.catch(function(error){
-console.log("There was na error: " + error);
-})
-//https://api.themoviedb.org/3/movie/{movie_id}/recommendations?api_key=<<api_key>>&language=en-US&page=1
-//https://api.themoviedb.org/3/genre/movie/list?api_key=<<api_key>>&language=en-US
-fetch("https://api.themoviedb.org/3/genre/movie/list?api_key="+key+"&language=en-US&page=1")
+//carrusel de genero
+// var arrayDeGeneros = information.results
+// var genero = arrayDeGeneros[0].genres
+fetch("https://api.themoviedb.org/3/"+ genero.name +"/movie/list?api_key="+key+"&language=en-US&page=1")
 
 .then (function(response) {
   return response.json();
@@ -98,7 +108,7 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key="+key+"&language=en
   var title
   var genero
   var li
-  var ul = document.querySelector("div section.recomendadas ul")
+  var ul = document.querySelector("section.recomendadas ul")
 
   for (var i = 0; i < 5; i++) {
      genero = arrayDePeliculas[i].genres
