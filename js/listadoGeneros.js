@@ -4,7 +4,7 @@ window.onload = function(){
   var id = searchParams.get("idGenero")
   var key = '14227022544b0f4bb15b6a738161d32f'
   var url
-  var urlGenero = "pagina4.html"
+  var urlGenero = "pelisGenero.html"
 
 
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key="+key+"&language=en-US")
@@ -13,21 +13,28 @@ window.onload = function(){
          return respuesta.json()
        })
         .then(function(informacion) {
-         var peliculas = informacion.results
+         var genero = informacion.genres
          console.log(informacion)
-
-         for (var i = 0; i < 10 ; i++) { //informacion.results.length
-          var genero = peliculas[i].genres
+         var ul = document.querySelector("section ul")
+         //var arrayDePeliculas = genres[]
+         console.log(genero);
+         for (var i = 0; i < genero.length ; i++) { //informacion.results.length
+           // genero[i]
           var li;
-          
+
           li = '<li>'
-          li += '<h1>' + genero + '</h1>'
+          li += "<a href='"+urlGenero+"?idGenero="+genero[i].id+"'>"
+          li += '<h1>' + genero[i].name + '</h1>'
+          li += "</a>"
           li += '</li>'
+          ul.innerHTML += li
 
           console.log(li);
 
-          document.querySelector("section").innerHTML += li
          }
+        })
+        .catch(function(error){
+          console.log("There was na error: " + error);
         })
 
 
