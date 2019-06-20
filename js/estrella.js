@@ -1,5 +1,4 @@
-//window.addEventListener('load',function(){
-
+window.addEventListener('load',function(){
 //console.log(sessionStorage);
 if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
   window.addEventListener("load", function() {
@@ -17,7 +16,6 @@ fetch("https://api.themoviedb.org/3/movie/"+id_de_pelicula+"?api_key="+key+"&lan
       })
       .then(function(dataPeli) {
     //  var pelicula = information
-      //console.log(information);
         if (favoritas.indexOf(idPelicula) >= 0) {
           document.querySelector(".estrellita").style.display="block"
         }
@@ -25,6 +23,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id_de_pelicula+"?api_key="+key+"&lan
         if (favoritas.indexOf(idPelicula) >= 0){
           var pos = favoritas.indexOf(idPelicula)
           favoritas.splice(pos,1)
+          document.querySelector(".estrellita").style.color= "gold"
         } else {
           favoritas.push(idPelicula)
           document.querySelector(".estrellita").style.color= "black"
@@ -41,4 +40,4 @@ fetch("https://api.themoviedb.org/3/movie/"+id_de_pelicula+"?api_key="+key+"&lan
         })
 })
 }
-//})
+})

@@ -8,7 +8,7 @@ var url_string = window.location.href
  //var id = searchParams.get("idGenero")
  //var genders = information.genres[0]
 
-window.addEventListener('load',function(){
+window.onload = function (){
   console.log(sessionStorage);
  if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
   document.querySelector(".estrellita").style.display = "block"
@@ -157,4 +157,4 @@ fetch("https://api.themoviedb.org/3/movie/"+ id_de_pelicula+ "/recommendations?a
     })
 
 
-})
+}

@@ -1,9 +1,9 @@
 window.onload = function () {
 
-  if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
-  alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
-  document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
-  }
+  // if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
+  // alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
+  // document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
+  // }
 
 var key = '14227022544b0f4bb15b6a738161d32f'
 var urlDetalle = "pagina5.html"

@@ -1,3 +1,6 @@
+var key = '14227022544b0f4bb15b6a738161d32f'
+var urlDetalle = "pagina5.html"
+
 window.addEventListener("load",  function(){
 
   if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
@@ -13,7 +16,7 @@ if (arrayDePelisFavoritas.length>0) {
   // como arrayDePelisFavoritas es un array, necesito recorrerlo
   for (var i = 0; i < arrayDePelisFavoritas.length; i++) {
     // recorro el array para obtener cada ID y hago un fetch (AJAX) para obtener la data de cada peli
-    var url = "https://api.themoviedb.org/3/movie/"+arrayDePelisFavoritas[i]+"?api_key=d72b8119ca0d802447ebd91bded10750&language=en"
+    var url = "https://api.themoviedb.org/3/movie/"+arrayDePelisFavoritas[i]+"?api_key="+key+"&language=en"
     var urlImg = "https://image.tmdb.org/t/p/original"
     fetch(url)
         .then(function(respuesta) {
