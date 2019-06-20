@@ -1,4 +1,10 @@
 window.onload = function () {
+
+  // if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
+  // alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
+  // document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
+  // }
+
 var key = '14227022544b0f4bb15b6a738161d32f'
 var urlDetalle = "pagina5.html"
 
@@ -23,7 +29,7 @@ fetch("https://api.themoviedb.org/3/search/movie?api_key="+key+"&language=en-US&
   var ul1 = document.querySelector("section ul")
   //var ul2 = document.querySelector("section.comingSoon ul")
 
-  
+
   for (var i = 0; i < 25; i++) {
       poster = arrayDePeliculas[i].poster_path
       title = arrayDePeliculas[i].title

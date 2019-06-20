@@ -8,9 +8,55 @@ var url_string = window.location.href
  //var id = searchParams.get("idGenero")
  //var genders = information.genres[0]
 
-window.addEventListener('load',function(){
-
-
+window.onload = function (){
+  console.log(sessionStorage);
+ if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
+  document.querySelector(".estrellita").style.display = "block"
+ }
+//     onload.addEventListener('load',function(){
+//
+//     //console.log(sessionStorage);
+//     if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
+//       window.addEventListener("load", function() {
+//         idPelicula = new URLSearchParams(location.search).get("idPelicula")
+//           var jsonFavoritas = localStorage.getItem("peliculasFavoritas")
+//           if (jsonFavoritas == null) {
+//             var favoritas = []
+//           } else {
+//             var objLit = JSON.parse(jsonFavoritas)
+//             var favoritas = objLit.caracteristica;
+//           }
+// fetch("https://api.themoviedb.org/3/movie/"+id_de_pelicula+"?api_key="+key+"&language=en-US")
+//           .then(function(data) {
+//             return data.json()
+//           })
+//           .then(function(dataPeli) {
+//             console.log(information);
+//           var pelicula = information
+//        })
+//        // .catch(function(error){
+//        //   console.log("There was na error: " + error);
+//        // })
+//             if (favoritas.indexOf(idPelicula) >= 0) {
+//               document.querySelector(".estrellita").style.display="block"
+//             }
+//           document.querySelector("ESTRELLA").onclick = function() {
+//             if (favoritas.indexOf(idPelicula) >= 0){
+//               var pos = favoritas.indexOf(idPelicula)
+//               favoritas.splice(pos,1)
+//               document.querySelector(".estrellita").style.color= "gold"
+//             } else {
+//               favoritas.push(idPelicula)
+//             }
+//               var objLit = {
+//                 caracteristica: favoritas
+//               }
+//               var json = JSON.stringify(objLit)
+//               localStorage.setItem("peliculasFavoritas", json)
+//           }
+//       })
+//   }
+// })
    fetch("https://api.themoviedb.org/3/movie/"+id_de_pelicula+"?api_key="+key+"&language=en-US")
    .then (function(response) {
      return response.json();
@@ -19,7 +65,7 @@ window.addEventListener('load',function(){
      console.log(information);
      var pelicula = information
      var urlImg = "https://image.tmdb.org/t/p/original"
-     var ul1 = document.querySelector("div.detalles section ul")
+     var ul = document.querySelector("div.detalles section ul")
 
      var detalles = pelicula.overview
      var title = pelicula.title
@@ -41,16 +87,17 @@ window.addEventListener('load',function(){
      li += '<p>'+ "genero:" + genero.name +'</p>'
      li += '<p>'+ "Estreno:" + fecha +'</p>'
      li += '<p>'+ "Idioma:" + idioma +'</p>'
+    // li += '<span class="estrellita">' + "&#9733;" + '</span>'
      li += '</li>'
-     ul1.innerHTML += li
+     ul.innerHTML += li
 
      })
      .catch(function(error){
        console.log("There was na error: " + error);
      })
 //trailer
-
-
+//else cierre
+//}
      fetch("https://api.themoviedb.org/3/movie/" + id_de_pelicula + "/videos?api_key=" + key + "&language=en-US")
 
      .then (function(response) {
@@ -77,6 +124,7 @@ fetch("https://api.themoviedb.org/3/movie/"+ id_de_pelicula+ "/recommendations?a
   console.log(information);
   console.log(information.results);
   var arrayDePeliculas = information.results
+  console.log(arrayDePeliculas);
   var urlImg = "https://image.tmdb.org/t/p/original"
   var poster
   var title
@@ -85,7 +133,7 @@ fetch("https://api.themoviedb.org/3/movie/"+ id_de_pelicula+ "/recommendations?a
   var ul = document.querySelector("section.recomendadas ul")
 
   for (var i = 0; i < 5; i++) {
-     genero = arrayDePeliculas[i].genres
+    genero = arrayDePeliculas[i].genres
      poster = arrayDePeliculas[i].poster_path
      title = arrayDePeliculas[i].title
      video = arrayDePeliculas[i].video
@@ -109,4 +157,4 @@ fetch("https://api.themoviedb.org/3/movie/"+ id_de_pelicula+ "/recommendations?a
     })
 
 
-})
+}
