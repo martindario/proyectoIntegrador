@@ -1,4 +1,11 @@
 window.onload = function(){
+
+  // if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
+  // alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
+  // document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
+  // }
+
+
   console.log("cargaaaaaaaaaaaaaa");
   var queryString = location.search
   var searchParams = new URLSearchParams(queryString);

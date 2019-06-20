@@ -3,6 +3,14 @@ var urlDetalle = "pagina5.html"
 
 window.onload = function () {
 
+if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
+alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
+document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
+}
+else {
+  alert("Porque no prueba creandose una cuenta")
+}
+
 //carrusel1
   fetch("https://api.themoviedb.org/3/movie/popular?api_key="+key+"&language=en-US&page=1")
 
