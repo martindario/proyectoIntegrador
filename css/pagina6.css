@@ -26,15 +26,14 @@ h2{
   font-family: cursive;
 
 }
-<<<<<<< HEAD
-=======
+
 
 form.login{
   font-style: italic;
   font-family: cursive;
 }
-/*
->>>>>>> master
+
+
 footer{
 background-color: #7B6E6E;
   margin: 0;
@@ -70,15 +69,15 @@ li {
 #navigation { float:right; clear:right; padding-top:-30px;
   padding-bottom:px; margin-left: 200px; width:80% ;
 margin-bottom: 100px }
-#navigation ul { list-style:none; }
+#navigation ul { list-style:none; margin-left: 115px;
+    height: 29px; }
 #navigation ul li { float:left; display:inline; padding-left:29px;  }
-#navigation ul li a { font-size:14px; font-weight:bold; color:#fff; text-decoration:none; }
+#navigation ul li a { font-size:25px; font-weight:bold; color:#fff; text-decoration:none; }
 #navigation ul li a.active,
 #navigation ul li a:hover { }
 =======
 } */
-/* h1{
+ h1{
   font-style: italic;
 color: #FFFFFF;
 } */
->>>>>>> master
