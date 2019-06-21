@@ -172,10 +172,14 @@ background-color: #7B6E6E;
   margin: 0;
 border: 0;
 width: 100%;
+height: 180px;
 }
 .creators{
 color: #FFFFFF;
 font-style: italic;
+font-size: 30px;
+padding: 24px;
+float: left;
 
 
 }
