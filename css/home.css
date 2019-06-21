@@ -81,7 +81,8 @@ input{
 .login{
   margin-left: 167vh;
   margin-top: 2vh;
-
+  background-color: olive;
+  font-family: monospace;
 }
 li.crack{
   width: 275px;
