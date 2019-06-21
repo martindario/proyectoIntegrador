@@ -30,6 +30,50 @@ display: block;
 ul.mySlides1, ul.mySlides2, ul.mySlides3 {
     text-align: center;
 } */
+
+nav {
+  overflow: hidden;
+  background-color: #0F0856;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.logo {
+  float: left;
+  width: 30%;
+  background-color: #0F0856;
+  height: 19vh;
+}
+
+ul.ul-menu {
+  float: left;
+  width: 70%;
+  margin-top: 60px;
+  background-color: #0F0856;
+}
+li.li-menu{
+  background-color: #0F0856;
+height: 94px;
+width: 100%;
+
+}
+li.li-menu{
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 40px;
+  border: white 8px inset;
+padding-right: 12px;
+padding: 15px;
+}
+.color-orange{
+color: #C0C0C0;
+font-size: 30px;
+height: 25vh;
+}
 ul li {
   width: 500px;
 }

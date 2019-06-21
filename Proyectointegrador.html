@@ -14,24 +14,43 @@
       <!-- <form class="login" action="" method="get"> -->
       <!-- <input type="text" name="log in" value="" placeholder="ingresar"> -->
       <a href="pagina 6.html"><button class="login" type="button">Login</button></a>
+      <a href="pagina 6.html"><button class="registrarse" type="button">registrarse</button></a>
     </form>
         <nav class="navegador">
             <ul class="logo">
-                <li><a href="proyectointegrador.html"><img width=”” src="img/procinemalogo.png" alt=”” ></a></li>
+                <li><a href="proyectointegrador.html"><img width=”5px;” src="img/procinemalogo.png" alt=”” ></a></li>
 
             </ul>
-            <ul class="ul-menu">
-              <li>
-                <form action="buscador.html" method="GET">
-                  <input type="text" name="buscar" value="" placeholder="buscar por pelicula,serie,persona" >
-                  <button type="submit">Buscar</button>
 
-                </form>
-              </li>
-                <li class="li-menu"><a class="color-orange" href="pagina 6.html">Movies</a></li>
-                <li class="li-menu"><a class="color-orange" href="pagina4.html">Generos</a></li>
-                <li class="li-menu"><a class="color-orange" href="favoritos.html">Favoritos</a></li>
-            </ul>
+
+                <div id="header">
+
+    <!-- Navigation -->
+    <div id="navigation">
+      <ul>
+          <li><a class="active" href="pagina 6.html">Peliculas</a></li>
+          <li><a href="pagina4.html">Generos</a></li>
+          <li><a href="favoritos.html">Favoritos</a></li>
+
+      </ul>
+    </div>
+    </nav>
+    <!-- end Navigation -->
+
+    <!-- Sub-menu -->
+    <div id="sub-navigation">
+      <div id="search">
+        <form action="buscador.html" method="get" accept-charset="utf-8">
+          <label for="search-field">BUSCAR</label>
+          <input type="text" name="buscar" value="ingresar pelicula" id="search-field" class="blink search-field"  />
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+
 
 
 </div>
@@ -40,7 +59,7 @@
 
   <section class="populares">
 
-        <p>Populares</p>
+        <h1>Populares</h1>
         <ul class="slideshow-container">
 
             <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
@@ -48,7 +67,7 @@
         </ul>
     </section>
     <section class="MayorPuntaje">
-     <p>Mejor puntuadas</p>
+     <h1>Mejor puntuadas</h1>
         <ul class="slideshow-container">
 
             <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
@@ -56,7 +75,7 @@
         </ul>
       </section>
     <section class="comingSoon">
-        <p>Proximos estrenos</p>
+        <h1>Proximos estrenos</h1>
         <ul class="slideshow-container">
 
             <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
@@ -68,7 +87,18 @@
   </body>
 
           <footer>
+            <div class="">
+        <div>
 
+<p class="creators">
+  Created by:
+  Valentino Mateo & Martin Melinsky
+</p>
+</div>
+<div>
+<a href=""<img class="api" width="" src="img/api.jpg" alt="">
+</div>
+  </div>
           </footer>
 </html>
 <script type="text/javascript" src="js/proyectointegrador.js">

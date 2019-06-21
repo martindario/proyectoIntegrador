@@ -4,11 +4,16 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #7B6E6E
+  background-color: #000000;
+  font-size: 12px;
+  line-height: 1.3;
+  font-family: Arial, Helvetica, Sans-Serif;
+
 }
 
 nav {
   overflow: hidden;
+  background-color:
 }
 
 nav ul {
@@ -18,27 +23,16 @@ nav ul {
 
 ul.logo {
   float: left;
-  width: 30%;
-}
-
-ul.ul-menu {
-  float: left;
-  width: 70%;
-  margin-top: 60px;
-
+  width: 20%;
+  height: 17vh;
+  background-color: #FFFFFF;
+  margin-bottom: 37px;
+  padding: 2px;
 
 }
-li.li-menu{
-  background-color: #0F0856;
-height: 94px;
-width: 100%;
-margin-top: -45px;
-}
-li.li-menu{
-  float: left;
-  width: 25%;
-  text-align: center;
-  padding: 40px;
+nav.navegador ul.logo li a img{
+  height: 118px;
+  margin-left: 34px;
 }
 
 form{
@@ -52,8 +46,12 @@ input{
 
 }
 .login{
-  margin-left: 80vh;
+  margin-left: 150vh;
   margin-top: 2,7vh;
+}
+a{
+  background-color:
+
 }
 
 /* carrusel  */
@@ -148,7 +146,7 @@ ul.mySlides1, ul.mySlides2, ul.mySlides3 {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin:2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -166,3 +164,43 @@ ul.mySlides1, ul.mySlides2, ul.mySlides3 {
   animation-name: fade;
   animation-duration: 1.5s;
 }
+footer{
+  background-color: #0F0856;
+  margin: 0;
+border: 0;
+width: 100%;
+}
+.creators{
+color: #FFFFFF;
+font-style: italic;
+
+
+}
+.api{
+margin-left: 950px;
+margin-bottom:;
+
+}
+h1{
+  font-style: italic;
+}
+#shell { width:980px; margin:0 auto; }
+
+#navigation { float:right; clear:right; padding-top:59px; padding-bottom:47px; margin-right: 116px; width: 390px;}
+#navigation ul { list-style:none; }
+#navigation ul li { float:left; display:inline; padding-left:29px;  }
+#navigation ul li a { font-size:14px; font-weight:bold; color:#fff; text-decoration:none; }
+#navigation ul li a.active,
+#navigation ul li a:hover { }
+
+#sub-navigation { display:block; clear:right; border-top:1px dashed #666; border-bottom:1px dashed #666; padding:8px 0;  }
+
+
+
+#search { width:98%; margin:0 0 0 auto; }
+#search label { float:left; display:inline; font-size:14px; font-weight:bold; color:#fff; line-height:24px; padding-right:6px; }
+#search .search-field { width:87%; border: 1px solid #413e3e; background:#000; color:#787878; padding:2px 0 2px 2px; }
+#search .search-button { font-size:14px; font-weight:bold; border:0; background:none; color:#fff;   cursor:pointer; margin-left:609px ;}
+
+#main { border-bottom:1px dashed #413e3e; }
+#content {  }
