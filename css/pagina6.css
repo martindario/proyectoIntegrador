@@ -4,17 +4,64 @@
   background-color: #7B6E6E;
 }
 
-
+header{
+  margin-top: 0;
+}
 form{
 text-align: center;
 margin-top: 90px;
 width: 100%
 }
-
-h1{
+nav.navegador ul.logo li a{
+  width:%;
+  margin: 0px;
+}
+ul {
+  width: 950px;
+}
+h2{
   text-align: center;
-  margin-top: -50px;
+  margin-top: -80px;
   font-style: italic;
   font-family: cursive;
 
 }
+footer{
+background-color: #7B6E6E;
+  margin: 0;
+border: 0;
+width: 100%;
+height: 180px;
+}
+.creators{
+color: #FFFFFF;
+font-style: italic;
+font-size: 30px;
+padding: 24px;
+float: left;
+
+
+}
+.api{
+margin-left: 950px;
+margin-bottom:;
+
+}
+h1{
+  font-style: italic;
+color: #FFFFFF;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    width: 20%;
+}
+
+#navigation { float:right; clear:right; padding-top:-30px;
+  padding-bottom:px; margin-left: 200px; width:80% ;
+margin-bottom: 100px }
+#navigation ul { list-style:none; }
+#navigation ul li { float:left; display:inline; padding-left:29px;  }
+#navigation ul li a { font-size:14px; font-weight:bold; color:#fff; text-decoration:none; }
+#navigation ul li a.active,
+#navigation ul li a:hover { }

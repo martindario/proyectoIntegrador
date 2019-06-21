@@ -209,6 +209,3 @@ color: #FFFFFF;
 #search label { float:left; display:inline; font-size:14px; font-weight:bold; color:#000000; line-height:24px; padding-right:6px; }
 #search .search-field { width:87%; border: 1px solid #413e3e; background:#FFFFFF; color:#787878; padding:2px 0 2px 2px; }
 #search .search-button { font-size:14px; font-weight:bold; border:0; background:none; color:#fff;   cursor:pointer; margin-left:609px ;}
-
-#main { border-bottom:1px dashed #413e3e; }
-#content {  }
