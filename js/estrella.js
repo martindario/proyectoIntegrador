@@ -33,13 +33,13 @@ fetch("https://api.themoviedb.org/3/movie/"+id_de_pelicula+"?api_key="+key+"&lan
           document.querySelector(".estrellita").style.color= "gold"
         } else {
           favoritas.push(id_de_pelicula)
-          document.querySelector(".estrellita").style.color= "black"
+          document.querySelector(".estrellita").style.color= "white"
         }
           var objLit = {
             caracteristica: favoritas
           }
           var json = JSON.stringify(objLit)
-          localStorage.setItem("peliculasFavoritas", json)
+          sessionStorage.setItem("peliculasFavoritas", json)
           console.log("peliculasFavoritas");
       }
     })

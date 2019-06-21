@@ -12,6 +12,7 @@ window.onload = function (){
   console.log(sessionStorage);
  if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
   document.querySelector(".estrellita").style.display = "block"
+  document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
  }
 //     onload.addEventListener('load',function(){
 //
@@ -139,7 +140,7 @@ fetch("https://api.themoviedb.org/3/movie/"+ id_de_pelicula+ "/recommendations?a
      video = arrayDePeliculas[i].video
      console.log(arrayDePeliculas[i].title)
 //carrusel
-     li = "<li class='mySlides1'>"
+     li += "<li class='mySlides1'>"
      li += "<a href='"+urlDetalle+"?id="+arrayDePeliculas[i].id+"'>"
      li += "<h1>"+ title +"</h1>"
      li += '<img src='+ urlImg + poster + '>'

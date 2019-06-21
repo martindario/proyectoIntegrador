@@ -3,15 +3,17 @@ var urlDetalle = "pagina5.html"
 
 window.addEventListener("load",  function(){
 
-  if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
-  alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
-  document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
-  }
-
+  // if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
+  // alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
+  // document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
+  // }
+console.log(sessionStorage);
+ arrayDePelisFavoritas = JSON.parse(window.sessionStorage.getItem("peliculasFavoritas"));
 // guardo el arrayDePelisFavoritas que esta en sessionStorage
-arrayDePelisFavoritas = JSON.parse(window.sessionStorage.getItem("peliculasFavoritas"));
-
+//arrayDePelisFavoritas.length > 0
 // checkeo que el array tenga por lo menos una peli favorita (un item)
+//window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null
+//(window.arrayDePelisFavoritas!="" && window.arrayDePelisFavoritas!=null)
 if (arrayDePelisFavoritas.length > 0) {
   // como arrayDePelisFavoritas es un array, necesito recorrerlo
   for (var i = 0; i < arrayDePelisFavoritas.length; i++) {
