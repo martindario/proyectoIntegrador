@@ -11,6 +11,13 @@ body{
   margin: 0px;
 
 }
+section ul li{
+  width: 275px;
+  }
+section ul li img {
+  width: 100%;
+  }
+
 head{
   background-color:#7B6E6E;
 }
@@ -33,6 +40,10 @@ ul.logo {
   padding: 2px;
 
 }
+
+section ul li{
+  color: white;
+}
 nav.navegador ul.logo li a img{
   height: 118px;
   margin-left: 34px;
@@ -51,6 +62,7 @@ input{
 .login{
   margin-left: 167vh;
   margin-top: 5vh;
+  background-color: red;
 }
 a{
   background-color:#7B6E6E;

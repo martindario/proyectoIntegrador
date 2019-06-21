@@ -39,7 +39,7 @@ fetch("https://api.themoviedb.org/3/movie/"+id_de_pelicula+"?api_key="+key+"&lan
             caracteristica: favoritas
           }
           var json = JSON.stringify(objLit)
-          localStorage.setItem("peliculasFavoritas", json)
+          sessionStorage.setItem("peliculasFavoritas", json)
           console.log("peliculasFavoritas");
       }
     })
