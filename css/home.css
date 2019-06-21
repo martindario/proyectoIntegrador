@@ -10,13 +10,13 @@ body{
   font-family: Arial, Helvetica, Sans-Serif;
   margin: 0px;
 }
-/* div#navegation ul li a{
+ div#navegation ul li a{
   font-size: 300%;
   font-family: cursive;
 }
 
 div #navegation ul li{
-} */
+}
 
 section ul li{
   width: 275px;
@@ -78,11 +78,11 @@ input{
 }
 .login{
   margin-left: 167vh;
-  margin-top: 5vh;
-  background-color: darkolivegreen;
+  margin-top: 2vh;
+
 }
 a{
-  background-color:#7B6E6E;
+
 
 }
 
@@ -224,8 +224,14 @@ float: left;
 }
 .api{
 margin-left: 950px;
-margin-bottom:;
+height: 15vh;
 
+}
+div img.api {
+    height: 58px;
+    margin-left: 737px;
+    margin-top: -90px;
+    float: right;
 }
 h1{
   font-style: italic;
