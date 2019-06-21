@@ -119,6 +119,7 @@ li.mySlides3 img {
   text-align: center;
 }
 
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -274,6 +275,21 @@ section ul.buscador li{
   margin-right: 1%;
 }
 
+
+section.populares h1{
+  color: white;
+  font-style: italic;
+}
+
+section.MayorPuntaje h1{
+  color: white;
+  font-style: italic;
+}
+
+section.comingSoon h1{
+  color: white;
+  font-style: italic;
+}
 
 >>>>>>> Stashed changes
 h1{
