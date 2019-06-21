@@ -1,8 +1,14 @@
+ var key = '14227022544b0f4bb15b6a738161d32f'
+ var url_string = window.location.href
+  var url = new URL(url_string);
+  var id_de_pelicula = url.searchParams.get("id");
+  console.log(id_de_pelicula);
+
+
+
 window.addEventListener('load',function(){
-//console.log(sessionStorage);
 if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
-  window.addEventListener("load", function() {
-    idPelicula = new URLSearchParams(location.search).get("idPelicula")
+  //  idPelicula = new URLSearchParams(location.search).get("idPelicula")
       var jsonFavoritas = localStorage.getItem("peliculasFavoritas")
       if (jsonFavoritas == null) {
         var favoritas = []
@@ -12,20 +18,21 @@ if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem
       }
 fetch("https://api.themoviedb.org/3/movie/"+id_de_pelicula+"?api_key="+key+"&language=en-US")
       .then(function(data) {
+        console.log(sessionStorage);
         return data.json()
       })
       .then(function(dataPeli) {
     //  var pelicula = information
-        if (favoritas.indexOf(idPelicula) >= 0) {
+        if (favoritas.indexOf(id_de_pelicula) >= 0) {
           document.querySelector(".estrellita").style.display="block"
         }
       document.querySelector(".estrellita").onclick = function() {
-        if (favoritas.indexOf(idPelicula) >= 0){
-          var pos = favoritas.indexOf(idPelicula)
+        if (favoritas.indexOf(id_de_pelicula) >= 0){
+          var pos = favoritas.indexOf(id_de_pelicula)
           favoritas.splice(pos,1)
           document.querySelector(".estrellita").style.color= "gold"
         } else {
-          favoritas.push(idPelicula)
+          favoritas.push(id_de_pelicula)
           document.querySelector(".estrellita").style.color= "black"
         }
           var objLit = {
@@ -33,11 +40,11 @@ fetch("https://api.themoviedb.org/3/movie/"+id_de_pelicula+"?api_key="+key+"&lan
           }
           var json = JSON.stringify(objLit)
           localStorage.setItem("peliculasFavoritas", json)
+          console.log("peliculasFavoritas");
       }
     })
       .catch(function(error){
       console.log("There was na error: " + error);
         })
-})
 }
 })

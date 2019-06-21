@@ -9,10 +9,10 @@ window.addEventListener("load",  function(){
   }
 
 // guardo el arrayDePelisFavoritas que esta en sessionStorage
-arrayDePelisFavoritas = JSON.parse(window.sessionStorage.getItem("favorita"));
+arrayDePelisFavoritas = JSON.parse(window.sessionStorage.getItem("peliculasFavoritas"));
 
 // checkeo que el array tenga por lo menos una peli favorita (un item)
-if (arrayDePelisFavoritas.length>0) {
+if (arrayDePelisFavoritas.length > 0) {
   // como arrayDePelisFavoritas es un array, necesito recorrerlo
   for (var i = 0; i < arrayDePelisFavoritas.length; i++) {
     // recorro el array para obtener cada ID y hago un fetch (AJAX) para obtener la data de cada peli
