@@ -18,3 +18,34 @@ h1{
   font-family: cursive;
 
 }
+
+form.login{
+  font-style: italic;
+  font-family: cursive;
+}
+/*
+footer{
+background-color: #7B6E6E;
+  margin: 0;
+border: 0;
+width: 100%;
+height: 180px;
+}
+.creators{
+color: #FFFFFF;
+font-style: italic;
+font-size: 30px;
+padding: 24px;
+float: left;
+
+
+}
+.api{
+margin-left: 950px;
+margin-bottom:;
+
+} */
+/* h1{
+  font-style: italic;
+color: #FFFFFF;
+} */
