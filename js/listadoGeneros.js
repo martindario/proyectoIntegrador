@@ -1,9 +1,5 @@
 window.onload = function(){
 
-  // if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
-  // alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
-  // document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
-  // }
 
   var queryString = location.search
   var searchParams = new URLSearchParams(queryString);
@@ -12,6 +8,9 @@ window.onload = function(){
   var url
   var urlGenero = "pelisGenero.html"
 
+  // if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
+  //   // alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
+  //   document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
 
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key="+key+"&language=en-US")
 
@@ -43,5 +42,4 @@ window.onload = function(){
           console.log("There was na error: " + error);
         })
 
-
-}
+         }

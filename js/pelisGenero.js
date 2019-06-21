@@ -1,9 +1,8 @@
 window.onload = function(){
 
   // if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
-  // alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
+  // // alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
   // document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
-  // }
 
 
   console.log("cargaaaaaaaaaaaaaa");
@@ -32,7 +31,7 @@ window.onload = function(){
              //var id = peliculas[i].id
 
             var li;
-            li = "<li>"
+            li = "<li class='crack'>"
             li += "<a href='"+urlDetalle+"?id="+peliculas[i].id+"'>"
             li += "<h1>"+ title +"</h1>"
             li += '<img src='+ urlImg + poster + '>'
@@ -47,6 +46,7 @@ window.onload = function(){
               console.log("There was na error: " + error);
         })
   }
+
 
 }
 

@@ -27,7 +27,9 @@ section ul li img {
 
 section.detalles ul{
   float: left;
-  margin-right: 53px;
+  /* margin-right: 53px; */
+  margin-left: 40%;
+  width: 34%
 }
 
 head{
@@ -81,9 +83,17 @@ input{
   margin-top: 2vh;
 
 }
-a{
+li.crack{
+  width: 275px;
+}
+li.crack img{
+width: 100%;
+}
 
-
+li h1{
+  font-style: italic;
+  color: white;
+  text-decoration: none;
 }
 
 /* carrusel  */
@@ -224,15 +234,48 @@ float: left;
 }
 .api{
 margin-left: 950px;
+<<<<<<< Updated upstream
 height: 15vh;
-
+=======
+margin-bottom:;
 }
+>>>>>>> Stashed changes
+
+section ul.buscador{
+  overflow: hidden;
+}
+section ul.buscador li{
+  float: left;
+  margin-right: 1%;
+}
+
+section ul.generos{
+  overflow: hidden;
+}
+section ul.generos li{
+  float: left;
+  margin-right: 1%;
+}
+
+<<<<<<< Updated upstream
 div img.api {
     height: 58px;
     margin-left: 737px;
     margin-top: -90px;
     float: right;
 }
+=======
+
+section ul.buscador{
+  overflow: hidden;
+}
+section ul.buscador li{
+  float: left;
+  margin-right: 1%;
+}
+
+
+>>>>>>> Stashed changes
 h1{
   font-style: italic;
 color: #FFFFFF;

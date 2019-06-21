@@ -1,9 +1,8 @@
 window.onload = function () {
 
-  // if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
+  if (window.sessionStorage.getItem("nombre")!="" && window.sessionStorage.getItem("nombre")!=null) {
   // alert("Bienvenido "+ window.sessionStorage.getItem("nombre"))
-  // document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
-  // }
+  document.querySelector('a button.login').innerHTML = window.sessionStorage.getItem("nombre")
 
 var key = '14227022544b0f4bb15b6a738161d32f'
 var urlDetalle = "pagina5.html"
@@ -40,7 +39,7 @@ fetch("https://api.themoviedb.org/3/search/movie?api_key="+key+"&language=en-US&
       // li += '<img src='+ urlImg + poster + '>'
       // li += '</li>'
       // ul1.innerHTML += li
-      li = "<li>"
+      li = "<li class='crack'>"
       li += "<a href='"+urlDetalle+"?id="+arrayDePeliculas[i].id+"'>"
       li += "<h1>"+ title +"</h1>"
       li += '<img src='+ urlImg + poster + '>'
@@ -54,4 +53,5 @@ fetch("https://api.themoviedb.org/3/search/movie?api_key="+key+"&language=en-US&
    .catch(function(error){
       console.log("There was na error: " + error);
     })
+   }
 }
